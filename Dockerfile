@@ -9,4 +9,6 @@ RUN useradd --create-home --home-dir $HOME -u 1000 maven \
 
 WORKDIR $HOME
 USER maven
-CMD mvn
+
+ENTRYPOINT ["/usr/bin/mvn"]
+CMD ["--help"]
